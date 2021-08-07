@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>This is the inside of cart</h1>
+<ul>
+    {% for item in cartitem %}
+    <li><span class="cart-item-title">{{item.title}}</span><span class="cart-item-price">{{item.price}}</span>
+    <span class="cart-item-des">{{item.des}}</span></li>
+    {% endfor %}
+
+    
+
+</ul>
+{% endblock %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0pxl̥;
+        }
+        nav{
+            display: flex;
+         margin-top: -10px;
+         background-color: chartreuse;
+         color: bisque;
+     }
+     .search-body{
+         margin: auto;
+     }
+     ul{
+         padding: 3px 10px;
+         width: 50%;
+         background-color: red;
+     }
+     li{
+         list-style: none;
+         padding: 5px 16px;
+        }
+    ul:hover{
+        border-color: blueviolet;
+        border: 2px;
+        border-radius:6px ;
+    }
+     a{
+         text-decoration: none;
+     }
+     .list{
+         display: flex;
+     }
+    div.book_body button{border: none;
+        border-radius: 5px;
+        background-color: blue;
+        color: #f0f8ff;
+        padding: 5px 10px;
+        margin-left: 30%;
+        margin-top: 15px;
+        font-size: 20px;}
+    </style>
+    <style>
+        div.list-1{
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        div.book_body{
+            border-width: 2px;
+            border-style: solid;
+            border-color: blue;
+            background-color: wheat;
+            /* display: inline-flex; */
+            height: 300px;
+            width: 21%;
+        margin: 20px 17px;
+        padding: auto;
+        margin-right: 21px;
+    }
+    div.book_body:nth-child(4n+1){
+        margin-left: 30px;
+    }
+    div.book_body>iframe{
+        display: none;
+    }
+    div.book_body>img{
+        display: block;
+    }
+    div.book_body:nth-child(n+5)>iframe{
+        display: block;
+    }
+    div.book_body:nth-child(n+5)>img{
+        display: none;
+    }
+    .book_price,.book_title,.add_to_cart{
+        display: block;
+        margin-left: 20px;
+        margin-top: 10px;
+        }
+        .book_image{
+            width: 100%;
+        }
+        .cart-item-title{
+        color: whitesmoke;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="list">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/admin">ADMIN</a></li>
+            <li><a href="/store/cart">CART</a></li>
+            <li><a href="/store">STORE</a></li>
+        </ul>
+        <span class="search-body"><form action="store/search-item " method="POST">
+            <input type="text" name="search" ><button  type="submit">search</button>
+        </form></span>
+    </nav>
+    <h1>this is the base code</h1>
+    {% block content %}{% endblock %}
+</body>
+</html>
